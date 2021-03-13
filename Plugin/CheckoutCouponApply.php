@@ -50,7 +50,7 @@ class CheckoutCouponApply
             if ($this->_configData->isEnabled()) {
                 $msg = $this->_couponValidator->validate($couponCode);
                 if (!empty($msg)) {
-                    throw new LocalizedException(__("%l", $msg));
+                    throw new LocalizedException(__($msg));
                 }
             }
             throw $e;
